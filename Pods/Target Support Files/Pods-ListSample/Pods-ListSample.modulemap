@@ -1,0 +1,6 @@
+framework module Pods_ListSample {
+  umbrella header "Pods-ListSample-umbrella.h"
+
+  export *
+  module * { export * }
+}
