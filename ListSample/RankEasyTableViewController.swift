@@ -68,6 +68,25 @@ class RankEasyTableViewController: UITableViewController {
 
      
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        
+        performSegue(withIdentifier: "easyToDetail", sender: self)
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) { // didselectrow data send detail view controller
+        
+        let detailVC = segue.destination as! InfoDetailViewController
+        
+        if let indexPath = tableView.indexPathForSelectedRow {
+            detailVC.detailHarder = openRecord![indexPath.row].harder
+            detailVC.detailTime = openRecord![indexPath.row].time
+            detailVC.detailName = openRecord![indexPath.row].name
+        }
+        
+    }
  
     
     func loadRecord() {
@@ -81,13 +100,16 @@ class RankEasyTableViewController: UITableViewController {
         
     }
     
-    func sort() {
-        
-        
-    }
-    
-   
-  
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        let destinationVC = segue.destination as! InfoDetailViewController
+//        
+//        if let indexPath = tableView.indexPathForSelectedRow{
+//            destinationVC.selectedCategory = openRecord?[indexPath.row]
+//        }
+//    }
+//
+//   
+//  
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

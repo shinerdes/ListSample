@@ -96,10 +96,13 @@
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="easy" image="easy-30.png" id="8Pi-Cn-O7s"/>
+                    <connections>
+                        <segue destination="Xuf-A1-sPH" kind="show" identifier="easyToDetail" id="kbP-rz-gZ3"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bzF-rv-l0t" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4418" y="644"/>
+            <point key="canvasLocation" x="2593" y="1463"/>
         </scene>
         <!--normal-->
         <scene sceneID="goh-N3-bSy">
@@ -125,10 +128,64 @@
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="normal" image="normal-30.png" id="WZJ-RB-EG7"/>
+                    <connections>
+                        <segue destination="Xuf-A1-sPH" kind="show" identifier="normalToDetail" id="jgr-Zz-B9G"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eT9-VA-APl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4418" y="1468"/>
+            <point key="canvasLocation" x="3394" y="1464"/>
+        </scene>
+        <!--Info Detail View Controller-->
+        <scene sceneID="Nmy-HD-sCL">
+            <objects>
+                <viewController id="Xuf-A1-sPH" customClass="InfoDetailViewController" customModule="ListSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sM4-Tm-X0s">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jbU-KK-LoM">
+                                <rect key="frame" x="46" y="92" width="229" height="126"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FdO-Vk-DtU">
+                                <rect key="frame" x="16" y="263" width="288" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.13742656511633344" green="1" blue="0.78505756177771535" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zGp-RE-EuM">
+                                <rect key="frame" x="16" y="323" width="288" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.29202209026833348" green="0.80269235460601818" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Harder" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VTb-rU-39k">
+                                <rect key="frame" x="16" y="383" width="288" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.75116293437783521" blue="0.53540323193520323" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="547-If-ycB"/>
+                    </view>
+                    <connections>
+                        <outlet property="viewRecordHarder" destination="VTb-rU-39k" id="WMu-od-2Kq"/>
+                        <outlet property="viewRecordImage" destination="jbU-KK-LoM" id="LRD-nz-pRg"/>
+                        <outlet property="viewRecordName" destination="FdO-Vk-DtU" id="4SV-0C-7zv"/>
+                        <outlet property="viewRecordTime" destination="zGp-RE-EuM" id="kMw-2d-izr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="62y-Kg-EeE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3393.75" y="2291.1971830985917"/>
         </scene>
         <!--hard-->
         <scene sceneID="A7M-Z2-FGg">
@@ -154,10 +211,13 @@
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="hard" image="hard-30.png" id="Hf7-Ji-EYD"/>
+                    <connections>
+                        <segue destination="Xuf-A1-sPH" kind="show" identifier="hardToDetail" id="4HW-ed-eRk"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uKE-OJ-ZNl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3394" y="1469"/>
+            <point key="canvasLocation" x="4149" y="1463"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="a9r-1p-iNT">
@@ -311,12 +371,12 @@
                                     <action selector="clickButton16:" destination="kfT-rd-T5C" eventType="touchUpInside" id="Xkm-6d-v4g"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" fixedFrame="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dd4-h4-s6h" userLabel="GTProgressBar" customClass="GTProgressBar" customModule="GTProgressBar">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dd4-h4-s6h" userLabel="GTProgressBar" customClass="GTProgressBar" customModule="GTProgressBar">
                                 <rect key="frame" x="16" y="125" width="288" height="47"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hlx-vo-u8G">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hlx-vo-u8G">
                                 <rect key="frame" x="16" y="64" width="288" height="47"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.5199366561792178" green="1" blue="0.99100307227449891" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -378,4 +438,7 @@
         <image name="hard-30.png" width="30" height="30"/>
         <image name="normal-30.png" width="30" height="30"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="kbP-rz-gZ3"/>
+    </inferredMetricsTieBreakers>
 </document>

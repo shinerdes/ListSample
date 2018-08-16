@@ -59,6 +59,24 @@ class RankNormalTableViewController: UITableViewController {
         
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "normalToDetail", sender: self)
+    }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) { // didselectrow data send detail view controller
+        
+        let detailVC = segue.destination as! InfoDetailViewController
+        
+        if let indexPath = tableView.indexPathForSelectedRow {
+            detailVC.detailHarder = openRecord![indexPath.row].harder
+            detailVC.detailTime = openRecord![indexPath.row].time
+            detailVC.detailName = openRecord![indexPath.row].name
+        }
+        
+    }
+    
+    
     
     func loadRecord() {
         

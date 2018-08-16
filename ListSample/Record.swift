@@ -16,6 +16,8 @@ class Record: Object {
     @objc dynamic var name: String = ""
     @objc dynamic var time: Double = 0
     @objc dynamic var harder: String = ""
+    
+    //이미지 파일 저장 
 
     
 }

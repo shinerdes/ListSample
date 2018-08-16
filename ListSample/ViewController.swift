@@ -8,8 +8,6 @@
 //
 
 
-//초,밀리초 단위로 조정
-
 
 import UIKit
 import Foundation
@@ -1007,7 +1005,7 @@ class ViewController: UIViewController {
                 timer.invalidate()
                 countLabel.text = "콩그레츄레이션"
                 commitRecord()
-                stopTime()
+            
             
          
          
@@ -1054,6 +1052,8 @@ class ViewController: UIViewController {
             recordHistory.name = nameTextField.text!
             recordHistory.time = finalTime //밀리초까지 해줘야
             recordHistory.harder = harder // 난이도
+            
+            // 이미지 삽입
             self.save(record: recordHistory)
             
            
@@ -1088,41 +1088,19 @@ class ViewController: UIViewController {
         
     }
     
-    func stopTime() {
-        
-        print("\(seconds) : \(String(format: "%02i", milliseconds))") // 남은 시간
-        
-        if milliseconds != 0 {
-            print("\(firstTime - seconds - 1) : \(String(format: "%02i", 100 - milliseconds))") // 소모시간
-            print("-----------------")
-            
-            
-        } // 남은 시간 계산
-        if milliseconds == 0 {
-            print("\(firstTime - seconds) : \(milliseconds)")
-        }
-        
-    }
     
     
-    
-  
-    
-    
+
 
 
     
 }
 
-// 난이도 별로 랭킹 시스템
-
-// 데이터항목들 정리
-// 1. 난이도 2.걸린시간 3.record에 등재할 이름 4
-
-
-
-// 버튼들 배열화 시켜서 코드 간단하게 - 나중에 최종 수정
-
+// 이름 작성 -> 확인 버튼 -> 카메라 or 앨범 -> 이미지 선택 -> realm 릴리즈
+// realm에 있는 이미지 리스트 -> 랭킹에서 다 뿌려지기
+// 랭킹에 있는 항목 누르기 -> 자세한 상세 정보
+// 상세한 정보에서는 이미지는 크게 보이게 만듬
+// 난이도별 tableview -> detailviewcontroller
 
 
 
